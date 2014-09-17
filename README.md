@@ -1,4 +1,4 @@
-Hodgkin-Huxley-Model
+Modeling-Project
 ====================
 
 BMED 4784 Project
