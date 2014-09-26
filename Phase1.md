@@ -132,8 +132,7 @@ function stepPulse()
     ylabel('Voltage (mV)');
     xlabel('Time (ms)');
     legend({'Voltage'});
-    %axis([0,100,-80,-60]);
-    title('Membrane Potential of Steady-State Neuron');
+    title('Membrane Potential during Step Pulse of 5uA/cm2');
     
     figure
     k = plot(t,(gBar_K*n.^4));
@@ -142,5 +141,5 @@ function stepPulse()
     legend([k,na],'Potassium','Sodium');
     ylabel('Conductance (mS/cm2)');
     xlabel('Time (ms)');
-    title('Potassium and Sodium Channel Condutance at Steady-State');
+    title('Potassium and Sodium Channel Condutance during Step Pulse of 5uA/cm2');
 end
