@@ -14,6 +14,7 @@ function steadyState()
     e_L = 10.6;
     v = 0;
     c = 1;
+    injectedCurrent = 0;
     
     a_m = 0.1*((25-v)/(exp((25-v)/10)-1));
     b_m = 4*exp(-v/18);
@@ -26,11 +27,9 @@ function steadyState()
     n(1) = a_n/(a_n+b_n);
     h(1) = a_h/(a_h+b_h);
 
-    endTime = 100;
+    tf = 100;
     timeStep = 0.1;
-    t = 0:timeStep:endTime;
-    
-    injectedCurrent = 0;
+    t = 0:timeStep:tf;
    
     for i = 1:numel(t)-1
    
