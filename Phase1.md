@@ -33,7 +33,7 @@ function steadyState()
     t = 0:timeStep:tf; %Vector of time points
    
     %Iterate through the vector with time points
-    for i = 1:numel(t)-1
+    for i = 1:length(t)-1
    
         %Rate constants at each time step
         a_m(i) = 0.1*((25-v(i))/(exp((25-v(i))/10)-1));
@@ -112,10 +112,10 @@ function stepPulse()
     t = 0:timeStep:tf; %Vector of time points
     
     I(1:500) = injectedCurrent; %Create an injected current vector with the first 0.5ms with the injected current
-    I(501:numel(t)) = 0; %Remainder of injected current vector is 0
+    I(501:length(t)) = 0; %Remainder of injected current vector is 0
    
     %Iterate through the vector with time points
-    for i = 1:numel(t)-1
+    for i = 1:length(t)-1
    
         %Rate constants at each time step
         a_m(i) = 0.1*((25-v(i))/(exp((25-v(i))/10)-1));
@@ -193,7 +193,7 @@ function constantCurrent()
     t = 0:timeStep:tf; %Vector of time points
    
     %Iterate through the vector with time points
-    for i = 1:numel(t)-1
+    for i = 1:length(t)-1
    
         %Rate constants at each time step
         a_m(i) = 0.1*((25-v(i))/(exp((25-v(i))/10)-1));
